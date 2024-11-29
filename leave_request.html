@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Request Approval</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Employee Leave Requests</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Leave Type</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>E001</td>
+                    <td>Wensi Cornejo</td>
+                    <td>Sick Leave</td>
+                    <td>2024-11-27</td>
+                    <td>2024-11-29</td>
+                    <td><span class="badge bg-warning">Pending</span></td>
+                    <td>
+                        <button class="btn btn-success btn-sm">Approve</button>
+                        <button class="btn btn-danger btn-sm">Deny</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>E002</td>
+                    <td>Wendel Ureta</td>
+                    <td>Vacation Leave</td>
+                    <td>2024-12-05</td>
+                    <td>2024-12-10</td>
+                    <td><span class="badge bg-warning">Pending</span></td>
+                    <td>
+                        <button class="btn btn-success btn-sm">Approve</button>
+                        <button class="btn btn-danger btn-sm">Deny</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>E003</td>
+                    <td>Ryme Simbajon</td>
+                    <td>Personal Leave</td>
+                    <td>2024-12-01</td>
+                    <td>2024-12-02</td>
+                    <td><span class="badge bg-success">Approved</span></td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" disabled>Approved</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>E004</td>
+                    <td>Thirdy Murillo</td>
+                    <td>Paternity Leave</td>
+                    <td>2024-12-01</td>
+                    <td>2024-12-08</td>
+                    <td><span class="badge bg-danger">Denied</span></td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" disabled>Denied</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        <a href="admin.html" class="btn btn-primary">Back to Dashboard</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
