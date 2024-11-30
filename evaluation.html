@@ -6,6 +6,12 @@
     <title>Employee Evaluation</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <style>
+        body {
+            background: rgb(57,57,57);
+background: linear-gradient(90deg, rgba(57,57,57,1) 2%, rgba(32,32,32,1) 32%, rgba(0,0,0,1) 81%);
+            color: #EBEBFF;
+        }
+
         .rating {
             display: flex;
             flex-direction: row-reverse;
@@ -28,6 +34,20 @@
         .rating label:hover ~ label {
             color: #f39c12;
         }
+
+        .btn-dark {
+            background: #5A2E98 ; 
+            font-weight: bold;
+        }
+
+        .card-header {
+            background: #5A2E98 ;
+            color: white; 
+            font-weight: bold;
+
+        }
+        
+       
     </style>
 </head>
 <body>
@@ -36,32 +56,57 @@
     <h2 class="text-center mb-4">Employee Evaluation</h2>
 
     <!-- Table of Employees -->
-    <h3>Employees to Evaluate</h3>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Employee ID</th>
-                <th>Name</th>
-                <th>Department</th>
-                <th>Evaluate</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>001</td>
-                <td>John Doe</td>
-                <td>Human Resources</td>
-                <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#evaluationModal">Evaluate</button></td>
-            </tr>
-            <tr>
-                <td>002</td>
-                <td>Jane Smith</td>
-                <td>Finance</td>
-                <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#evaluationModal">Evaluate</button></td>
-            </tr>
-            <!-- Add more employees as needed -->
-        </tbody>
-    </table>
+    
+    <div class="row mt-4">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header">Employee to Evaluate</div>
+            <div class="card-body bg-dark ">
+              <table class="table table-bordered">
+                <thead>
+                  <tr class="bg-dark text-light">
+                    <th class="bg-dark text-light">Employee ID</th>
+                    <th class="bg-dark text-light">Employee Name</th>
+                    <th class="bg-dark text-light">Department</th>
+                    <th class="bg-dark text-light">Evaluate</th>
+                    
+                  </tr>
+                </thead>
+                <tbody id="transactionTable">
+                  <tr>
+                    <td class="bg-dark text-light">001</td>
+                    <td class="bg-dark text-light">Ryme Magsalsal</td>
+                    <td class="bg-dark text-light">Human Resources</td>
+                    <td class="bg-dark text-light"><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#evaluationModal">Evaluate</button></td>
+                    
+                  </tr>
+                  <tr>
+                    <td class="bg-dark text-light">002</td>
+                    <td class="bg-dark text-light">Mikron</td>
+                    <td class="bg-dark text-light">Programmer</td>
+                    <td class="bg-dark text-light"><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#evaluationModal">Evaluate</button></td>
+                    
+                  </tr>
+                  <tr>
+                    <td class="bg-dark text-light">003</td>
+                    <td class="bg-dark text-light">Kimberly Lee</td>
+                    <td class="bg-dark text-light">Finance</td>
+                    <td class="bg-dark text-light"><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#evaluationModal">Evaluate</button></td>
+                    
+                  </tr>
+                  <tr>
+                    <td class="bg-dark text-light">004</td>
+                    <td class="bg-dark text-light">John Doe</td>
+                    <td class="bg-dark text-light">IT</td>
+                    <td class="bg-dark text-light"><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#evaluationModal">Evaluate</button></td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Modal for Employee Evaluation Form -->
     <div class="modal fade" id="evaluationModal" tabindex="-1" aria-labelledby="evaluationModalLabel" aria-hidden="true">
@@ -203,7 +248,7 @@
             </div>
         </div>
     </div>
-    <a href="admin.html" class="btn btn-primary">Back to Dashboard</a>
+    <a href="admin.html" class="btn btn-dark">Back to Dashboard</a>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
